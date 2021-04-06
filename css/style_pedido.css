@@ -1,0 +1,140 @@
+
+#contenido_mi_pedido{
+    grid-column: 1 /span 2;
+}
+
+#pedido{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.item p{
+    padding: 0px;
+    margin: 0px;
+}
+.imagen{
+    grid-column: 1;
+}
+.imagen img{
+    height: 300px;
+    width: 300px;
+}
+
+.descripcion{
+    grid-column: 2;
+    padding-left: 20px;
+    padding-top: 35px;
+}
+
+.img_menos{
+    display: inline-block;
+    height: 20px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-top: 45px;
+    width: 20px;
+    
+    transition: transform 0.3s ease-in-out 0.0s;
+}
+
+.c_actual{
+    display: inline-block;
+}
+
+.img_mas{
+    display: inline-block;
+    height: 20px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 15px;
+    margin-top: 45px;
+    width: 20px;
+    
+    transition: transform 0.3s ease-in-out 0.0s;
+}
+
+.img_eliminar:hover, .img_mas:hover, .img_menos:hover{
+    transform: scale(1.3);
+}
+
+.img_eliminar{
+    height: 20px;
+    margin-top: 0px;
+    margin-left: 35px;
+    margin-bottom: 7px;
+    width: 20px;
+
+    transition: transform 0.3s ease-in-out 0.0s;
+}
+
+.img_eliminar:hover{
+    transform: scale(1.3);
+}
+
+.lblSubTotal{
+    margin-top: 0px;
+}
+
+#btnConfirmar{
+    float: right;
+    grid-column: 1;
+}
+
+h3{
+    float: right;
+    grid-column: 1;
+    width: 150px;
+}
+
+#mi_pedido{
+    text-align: center;
+}
+#datos_contacto h2{
+    text-align: center;
+}
+
+#datos_contacto input{
+    max-width: 600px;
+}
+
+#carritoVacio{
+    height: 80%;
+    width: 80%;
+}
+
+#total{
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+
+#paypal-button-container{
+    max-width: 400px;
+}
+
+@media(max-width: 650px){
+    .item{
+        grid-template-columns: 1fr;
+    }
+    #contenido_mi_pedido{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 105px minmax(500px,1fr) 150px;
+    }
+
+    #pie{
+        grid-row: 3;
+    }
+    .descripcion{
+        grid-column: 1;
+    }
+}

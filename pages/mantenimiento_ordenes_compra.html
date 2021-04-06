@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_ordenes_compras.css">
+    <link rel="stylesheet" href="../css/style_mantenimiento_ordenes.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Mantenimiento de ordenes</title>
+</head>
+<body>
+    <div id="contenedor">
+        <!-- contenedor del encabezado-->
+        <div id="encabezado">
+            <header>
+                <img id="logo_encabezado" src="../images/logo.png" alt="Logo"/>
+                <nav id="barra_navegacion">
+                    <!--Lista de opciones del encabezado-->
+                    <ul>
+                        <li class="elementos_nav"><a href="ordenes_de_compra.html">Ordenes</a></li>
+                        <li class="elementos_nav"><a href="mantenimiento_ordenes_compra.html">Mantent.</a></li>
+                        <li class="elementos_nav"><a href="proveedores.html">Prov.</a></li>
+                        <li class="elementos_nav"><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <!-- Contenedor del contenido principal -->
+        <div id="contenido_ordenes">
+            <main>
+                <h1>Mantenimiento de ordenes</h1>
+                <section id="filtrosPedido">
+                    <div class="form-group input-group">
+                        <label for="TipoFiltro" class="col-lg-2">Tipo Filtro:</label>
+                        <div class="col-lg-10">
+                            <select name="slcTipoFiltro" id="TipoFiltro" class="selectpicker show-menu-arrow form-control" onchange="tiposFiltros()">
+                                <option value="0">Todas</option>
+                                <option value="1">Proveedor</option>
+                                <option value="2">Codigo de Orden</option>
+                                <option value="3">Estado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="filtroProveedor" class="form-group input-group">
+                            <label for="Proveedor" class="col-lg-2">Seleccione Uno:</label>
+                            <div class="col-lg-10">
+                                <select name="slcFiltroProveedor" id="Proveedor" class="selectpicker show-menu-arrow form-control" onchange="poblarConProveedor()">
+                                </select>
+                            </div>
+                        </div>
+                        <div id="filtroCodigo" class="form-group input-group">
+                            <label for="buscarCodigo" class="col-lg-2">Ingrese Codigo:</label>
+                            <input type="text" id="buscarCodigo" class="col-lg-5 form-control">
+                            <button type="button" class="col-lg-1 btn btn-primary" id="btnBuscarCodigo" onclick="poblarConCodigo()">Buscar</button>
+                        </div>
+                        <div id="filtroEstado" class="form-group input-group">
+                            <label for="estado" class="col-lg-2">Seleccione Uno:</label>
+                            <div class="col-lg-10">
+                                <select name="slcFiltroEstado" id="estado" class="selectpicker show-menu-arrow form-control" onchange="poblarConEstado()">
+                                    <option value="1">Solicitada</option>
+                                    <option value="2"> En Transito</option>
+                                    <option value="3">Recibido</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="filtroRango" class="form-group input-group">
+                            <label for="fechaInicio" class="col-lg-1">Inicio</label>
+                            <input type="text" id="fechaInicio" class="col-log-2 form-control" placeholder="Dia/Mes/Año">
+                            <label for="fechaFinal" class="col-lg-1">Fin</label>
+                            <input type="text" id="fechaFinal" class="col-log-2 form-control" placeholder="Dia/Mes/Año">
+                            <button type="button" class="col-lg-1 btn btn-primary" id="btnBuscarRango">Buscar</button>
+                        </div>
+                    </div>
+                </section>
+                <section id="detalleOrden">
+
+                </section>
+                <section id="mantenimientoOrdenes">
+                    <section class="listadoOrdenes">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Proveedor</th>
+                                    <th>Descripcion</th>
+                                    <th>Fecha Pedido</th>
+                                    <th>Fecha Entrega</th>
+                                    <th>Total</th>
+                                    <th>Ops.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaDetalles">
+                                
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+            </main>
+        </div>
+        
+         <!--Contenedor del pie de pagina-->
+        <div id="pie">
+            <footer>
+                <p>Avenida del optimista y soñador, Zona 12</p>
+                <p>Ciudad de Guatemala</p>
+                <p>@2020bikeshop - Todos los derechos reservados</p>
+                <p>Contactenos Via: <a href="">email</a> </p>
+            </footer>
+        </div>
+    </div>
+    <script src="../js/productos.js"></script>
+    <script src="../js/proveedores.js"></script>
+    <script src="../js/ordenesDeCompra.js"></script>
+    <script src="../js/mantenimientoOrdenes.js"></script>
+    <script>cargaSelectTipo(); poblarOrdenes(); esconder();</script>
+</body>
+</html>

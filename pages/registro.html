@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Registro</title>
+</head>
+<body>
+    <!-- contenedor del encabezado-->
+    <div id="encabezado_log">
+        <header id = "header_log">
+            <h1>BIENVENIDO A BIKE SHOP</h1>
+        </header>
+    </div>
+    <div>
+        <!--contenedor del formulario de login el cual se muestra centrado-->
+        <main id="contenedor_formulario">
+            <form action="" id="formulario">
+                <label id="titulo">Formulario Registro</label>
+
+                <input type="text" id="nombre" 
+                required placeholder="Ingrese su Nombre">
+
+                <select id="puesto">
+					<option value = "Operador">Operador</option>
+					<option value = "Administrador">Administrador</option>
+				</select>
+
+                <input type="password" id="contrasenia" 
+                required placeholder="Ingrese su Contraseña">
+
+                <label id="acuerdos">De acuerdo con Terminos y Condiciones</label>
+
+                <button type="button" id="registrar" onclick = "Add()">Registrar</button>
+
+                <a id="pregunta" href="../pages/login.html" 
+                target="_blank">¿Ya tengo una cuenta?</a>
+            </form>
+        </main>
+    </div>
+    <!--contenedor del pie de la pagina-->
+    <div id="pie">
+        <footer>
+            <p>Avenida del optimista y soñador, Zona 12</p>
+            <p>Ciudad de Guatemala</p>
+            <p>@2020bikeshop - Todos los derechos reservados</p>
+            <p>Contactenos Via: <a href="">email</a> </p>
+        </footer>
+    </div>
+	<script src="../js/registro.js"></script>
+</body>
+</html>

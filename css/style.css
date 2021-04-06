@@ -1,0 +1,529 @@
+/*la estructura de la pagina esta hecha con css grid
+la cual permite un mejor manejo para hacer responsive el 
+sitio*/
+
+/*la informacion contenida en el sitio esta de forma estatica
+no es dinamica, si los precios cambian se debe cambiar el codigo
+para mejorar el sitio se debe hacer con informacion dinamica
+y modificable por el usuario*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+p,a,b,h1,h2,h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*identificador del contenedor principall*/
+#contenedor{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 65px 1fr 150px;
+}
+
+/*caja del encabezado*/
+#encabezado{
+    display: grid;
+    background-color: rgb(223, 250, 255);
+    box-shadow: 0px 2px 5px gray;
+    grid-column: 1 /span 2;
+    grid-row: 1;
+}
+
+#encabezado header{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+}
+
+/*Logo mostrado en el encabezado*/
+#logo_encabezado{
+    justify-self: right;
+    align-self: center;
+    grid-column: 1;
+    grid-row: 1;
+    height: 70px;
+    width: 70px;
+    
+}
+
+/*esta barra de navegacion esta integrada dentro del header*/
+#barra_navegacion{
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: right;
+    padding-right: 80px;
+    
+}
+
+/*clase para cada elemento dentro de la barra de navegacion*/
+.elementos_nav{
+    display: inline-block;
+    height: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 15px;
+    text-align: center;
+    width: 100px;
+}
+
+#carrito{
+    height: 50px;
+}
+
+.elementos_nav img{
+    height: 25px;
+    transition: transform 0.3s ease-in-out 0.0s;
+    width: 25px;
+}
+
+.elementos_nav img:hover{
+    transform: scale(1.2);
+}
+
+/*para dar estilo a los elementos dentro de la barra de navegacion*/
+.elementos_nav a{
+    color: black;
+    font-size: 20px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+/*cambia de color los textos dentro de la barra de navegacion*/
+.elementos_nav a:hover{
+    color: rgb(43, 159, 236);
+}
+
+/*caja de la barra lateral izquierda*/
+#lateral{
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+/*imagen de la barra lateral*/
+#img_bici{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+}
+
+/*texto de nuestro menu*/
+aside h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*estilos del contenido de la tabla del menu*/
+.opciones{
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+.opciones td{
+    box-shadow: 0px 3px 5px gray;
+    height: 100px;
+    width: 300px;
+}
+
+.opciones img{
+    display: block;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    transition: transform 0.3s ease-in-out 0.0s;
+}
+
+/*hace un poco mas grande la imagen al pasar el curso*/
+.opciones img:hover{
+    transform: scale(1.2);
+}
+
+/*contenido principal*/
+#contenido{
+    grid-column: 2;
+    grid-row: 2;
+    padding-bottom: 20px;
+}
+
+main h1{
+    margin-top: 20px;
+    text-align: center;
+}
+
+main{
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+main img{
+    display: block;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 100%;
+}
+
+main h3{
+    margin-top: 15px;
+}
+
+main p{
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+/*estilos para el pie de pagina*/
+#pie{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    grid-column: 1 /span 2;
+    grid-row: 3;
+    padding-top: 20px;
+    text-align: center;
+}
+
+footer a{
+    color: white;
+}
+
+footer p{
+    padding: 0px;
+    margin: 0px;
+}
+/*estilo para la tabla de la opcion 1 (marca giant) */
+#tabla_opcion1{
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+    border: none;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tabla_opcion1 tr{
+    box-shadow: 0px 2px 5px black;
+}
+#tabla_opcion1 tr:nth-child(odd){
+    background-color: rgb(207, 207, 207);
+}
+
+#tabla_opcion1 td{
+    border: none;
+}
+
+#tabla_opcion1 img{
+    height: 110px;
+    width: 150px;
+    margin-top: 0px;
+}
+
+#tabla_opcion1 .descripcion_tabla{
+    padding-left: 7px;
+    width: 65%;
+}
+
+#tabla_opcion1 .precio_tabla{
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 100px;
+}
+#tabla_opcion1 .precio_tabla p{
+    text-align: center;
+}
+
+/*estilos para la tabla de la opcion 2 (marca specialized)*/
+#tabla_opcion2{
+    border-collapse: collapse;
+    border: none;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tabla_opcion2 td{
+    border: none;
+}
+
+.descripcion{
+    width: 75%;
+}
+
+.precio{
+    text-align: right;
+}
+
+/*estilo para la ventana de reguistro*/
+#encabezado_log{
+    background-color: rgb(223, 250, 255);
+}
+#contenedor_formulario{
+    background-image: url("../images/login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 1 /span 2;
+    grid-row: 2;
+    padding-top: 20px;
+    height: 550px;
+}
+
+header h1{
+    grid-column: 1 /span 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+#formulario{
+    background-color: rgba(27, 29, 37, 0.8);
+    border-style: none;
+    border-radius: 20px;
+    color: white;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(7,40px);
+    grid-gap: 20px;
+    height: 90%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+input{
+    background-color: rgba(27, 29, 37, 0);
+    border: none;
+    border-bottom: solid;
+    border-bottom-color: rgb(226, 226, 250);
+    color: white;
+    padding-left: 10px;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.692);
+}
+
+#registrar,#login{
+    background-color: rgb(32, 55, 255);
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+}
+
+#registrar:hover,#login:hover{
+    background-color: rgb(31, 124, 231);
+}
+
+#titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+#acuerdos{
+    text-align: center;
+}
+#pregunta{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#pregunta:hover{
+    color: rgb(255, 252, 47);
+}
+#pregunta,#acuerdos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align: center;
+}
+
+/*estilo para el login*/
+
+#formulario_log{
+    background-color: rgba(27, 29, 37, 0.8);
+    border-style: none;
+    border-radius: 20px;
+    color: white;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 80px repeat(5,40px);
+    grid-gap: 20px;
+    height: 80%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+
+#titulo_log{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+#registrate{
+    text-decoration: none;
+    color: yellow;
+}
+
+#registrate:hover{
+    color: blue;
+}
+
+#oscura{
+    background-color: rgba(0, 0, 0, 0.596);
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+#emergente{
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 30px;
+    box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.349);
+    display: none;
+    height: 85%;
+    max-height: 600px;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    position: absolute;
+    width: 60%;
+
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+
+#emergente img{
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    margin-left: 90%;
+    transition: transform 0.3s ease-in-out 0.0s;
+    width: 20px;
+}
+#emergente img:hover{
+    transform: scale(1.2);
+}
+
+#formularioIngreso{
+    padding-top: 15px;
+}
+
+#pie_log{
+    background-color: rgb(223, 250, 255);
+    border-radius: 15px;
+    height: 15%;
+    margin-top: 5px;
+    width: 100%;
+}
+
+#pie_log img{
+    display: inline-block;
+    height: 80%;
+    width: 80px;
+    margin-top: 10px;
+    margin-left: 12%;
+}
+
+/*media cuando la pantalla se hace menor a 600px
+lo que se hizo fue mover la barra lateral derecha
+abajo del contenido principal para ello se agrego una nueva
+fila a la grid del contendor principal y solo se creo una columna
+El header tambien se partio en 2 filas para colocar
+el logo arriba de las opciones inicio, productos y login*/
+@media(max-width: 650px){
+
+    /*se reduce a una columna el contenedor principal
+    se agrega una fila extra y se modifica el alto de la primera fila*/
+    #contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 105px minmax(200px,1fr) minmax(200px,1000px) 150px;
+    }
+
+    /*el header se divide en 2 filas la primer para la imagen y la 2da para la barra de navegacion*/
+    #encabezado header{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 3fr;
+        align-content: center;
+    }
+
+    /*la imagen de logo se coloca en la primera fila del header y se reduce el tamaño y se centra*/
+    #logo_encabezado{
+        grid-column: 1;
+        grid-row: 1;
+        height: 50px;
+        justify-self: center;
+        width: 50px;
+    }
+
+    /*la barra de navegacion se coloca en la 2da fila de header*/
+    #barra_navegacion{
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: center;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+    /*se modifican las dimensiones y margenes de los 
+    botones de la barra de navegacio*/
+    .elementos_nav{
+        height: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 75px;
+    }
+    
+    /*el contenido se coloca en la 2da fila y col 1 y se modifica
+    el padding inferior */
+    #contenido{
+        grid-column: 1;
+        grid-row: 2;
+        padding-bottom: 20px;
+    }
+    
+    /*la barra lateral se coloca en la fila 3 y col 1 bajo el 
+    contenido principal*/
+    #lateral{
+        grid-column: 1;
+        grid-row: 3;
+        padding-bottom: 0px;
+    }
+
+    /*El pie de pagina se mueve a la fila 4 y columna 1*/
+    #pie{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    /*se central los textos de las tablas de productos*/
+    .precio p, .descripcion b, .descripcion p{
+        text-align: center;
+    }
+
+    /*se modifica el pixelaje de unos textos en las tablas de productos (marca giant)*/
+    .descripcion_tabla b, .descripcion_tabla p, .precio_tabla p{
+        font-size: 12px;
+    }
+
+    /*los formularios se hacen mas paqueños con forme la pantalla*/
+    #formulario_log,#formulario{
+        grid-template-columns: 70%;
+        width: 80%;
+    }
+
+}

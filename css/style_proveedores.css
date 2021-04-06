@@ -1,0 +1,39 @@
+#contenido_Proveedores{
+    grid-column: 1 /span 2;
+    grid-row: 2;
+}
+
+input{
+    max-width: 700px;
+    padding-left: 40px;
+}
+
+#ingreso{
+    margin-top: 40px;
+}
+
+
+@media(max-width:600px){
+    #contenido_Proveedores{
+        grid-column: 1;
+        grid-row: 2;
+        margin-bottom: 50px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    main{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    #contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 105px minmax(500px,1fr) 150px;
+    }
+
+    #pie{
+        grid-row: 3;
+    }
+    #t_head{
+        font-size: 10px;
+    }
+}

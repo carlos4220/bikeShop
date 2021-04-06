@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_proveedores.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Provedores</title>
+</head>
+<body>
+    <div id="contenedor">
+        <!-- contenedor del encabezado-->
+        <div id="encabezado">
+            <header>
+                <img id="logo_encabezado" src="../images/logo.png" alt="Logo"/>
+                <nav id="barra_navegacion">
+                    <!--Lista de opciones del encabezado-->
+                    <ul>
+                        <li class="elementos_nav"><a href="ordenes_de_compra.html">Ordenes</a></li>
+                        <li class="elementos_nav"><a href="mantenimiento_ordenes_compra.html">Mantent.</a></li>
+                        <li class="elementos_nav"><a href="proveedores.html">Prov.</a></li>
+                        <li class="elementos_nav"><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <!-- Contenedor del contenido principal -->
+        <div id="contenido_Proveedores">
+            <main>
+                <h1>Ingreso De Proveedores</h1>
+                <section id="ingreso">
+                    <form action="">
+                        <div class="form-group input-group">
+                            <label for="codigoProveedor" class="col-lg-2">Codigo</label>
+                            <div class="col-lg-10">
+                                <input type="text" name="txtCodigoProveedor" id="CodigoProveedor" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group input-group">
+                            <label for="NombreProveedor" class="col-lg-2">Nombre</label>
+                            <div class="col-lg-10">
+                                <input type="text" name="txtNombre" id="NombreProveedor" class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group">
+                            <label for="Telefono" class="col-lg-2">Telefono</label>
+                            <div class="col-lg-10">
+                                <input type="text" name="txtTelefono" id="Telefono" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group">
+                            <label for="Email" class="col-lg-2">Email</label>
+                            <div class="col-lg-10">
+                                <input type="email" name="txtEmail" id="Email" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group">
+                            <label for="precioProducto" class="col-lg-2">Direccion</label>
+                            <div class="col-lg-10">
+                                <input type="text" name="txtDireccion" id="Direccion" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group" id="agregar">
+                            <button type="button" class="btn btn-primary" onclick="agregarProveedor()">Agregar</button>
+                        </div>
+                        
+                    </form>
+                </section>
+                <section id="Proveedores">
+                    <h2>Listado de Proveedores</h2>
+                    <!---->
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead id="t_head" class="thead-dark">
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Nombre</th>
+                                    <th>Telefono</th>
+                                    <th>Email</th>
+                                    <th>Direccion</th>
+                                    <th>Ops.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ListaProv">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </section>
+            </main>
+        </div>
+        
+         <!--Contenedor del pie de pagina-->
+        <div id="pie">
+            <footer>
+                <p>Avenida del optimista y soñador, Zona 12</p>
+                <p>Ciudad de Guatemala</p>
+                <p>@2020bikeshop - Todos los derechos reservados</p>
+                <p>Contactenos Via: <a href="">email</a> </p>
+            </footer>
+        </div>
+    </div>
+    <script src="../js/proveedores.js"></script>
+    <script type="text/javascript">cargarProveedores(); poblarListadoProveedores();</script>
+</body>
+</html>

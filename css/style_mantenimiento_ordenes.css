@@ -1,0 +1,18 @@
+/*identificador del contenedor principall*/
+#contenedor{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 65px minmax(500px,1fr) 150px;
+}
+
+.solicitada{
+    background-color: rgba(133, 255, 133, 0.808);
+}
+
+.en_transito{
+    background-color: rgba(252, 255, 88, 0.733);
+}
+
+.recibido{
+    background-color: rgba(86, 97, 255, 0.664);
+}

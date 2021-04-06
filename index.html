@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/encabezado.css">
+    <link rel="stylesheet" href="css/lateral.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Bike Shop</title>
+</head>
+<body>
+    <div id="contenedor">
+        <!-- contenedor del encabezado-->
+        <div id="encabezado">
+            <header>
+                <img id="logo_encabezado" src="images/logo.png" alt="Logo"/>
+                <nav id="barra_navegacion">
+                    <!--Lista de opciones del encabezado-->
+                    <ul>
+                        <li class="elementos_nav"><a href="index.html">Inicio</a></li>
+                        <li class="elementos_nav"><a href="pages/productos.html?1">Productos</a></li>
+                        <li class="elementos_nav"><a href ="#" onclick="cargarLogin(1)">Login</a></li>
+                        <li class="elementos_nav" id="carrito"><a href="pages/mi_pedido.html"><img src="images/carrito.png" alt="carrito"></a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <!-- contenedor de la barra lateral izquierda -->
+        <div id="lateral">
+            <aside>
+                <img id="img_bici" src="images/bici.png" alt="Logo"/>
+
+                <h2>NUESTRAS MARCAS</h2>
+                <!-- Tabla con marcas las cuales abren nuevas ventanas -->
+                <table class="opciones">
+                    <tr>
+                        <td>
+                            <a href="pages/productos.html?2"><img src="images/giant.png" alt="giant"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="pages/productos.html?3"><img src="images/specialized.png" alt="specialized"/></a>
+                        </td>
+                    </tr>
+                    
+                </table>
+
+                <h2>PROXIMAS MARCAS</h2>
+                <!-- Tabla con marcas proximas estas solo estas de muestra no abren mas ventanas-->
+                <table class="opciones">
+                    <tr>
+                        <td>
+                            <img src="images/scott.png" alt="scott"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/trek.jpg" alt="trek"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/haro.png" alt="haro"/>
+                        </td>
+                    </tr>
+                </table>
+            </aside>
+        </div>
+
+        <!-- Contenedor del contenido principal el cual se muestra a la derecha-->
+        <div id="contenido">
+            <main>
+                <h1>BIENVENIDOS A BIKE SHOP</h1>
+                <img src="images/home.jpg" alt="Home"/>
+                <h3>Nuestra Historia:</h3>
+                <p>
+                    Todo inicio en los años 2005 cuando las bicicletas empezarona a implementar 
+                    tecnologias que todos los ciclistas queriamos tener, las bicicletas se hacian mas comodas
+                    y divertidas de conducir, nosotros como empresa manejabamos pocas marcas de bicicletas
+                    como lo es Giant y Trek ya que eran las mas demandadas, poco a poco empezamos a notar
+                    un crecimiento en la demanda de estas bicicletas y nuestros clientes nos pedian
+                    otros modelos y marcas ya que les interesaban otros estilos de ciclismo y al
+                    ver este aumento en la demanda de nuevos productos empezamos a trabajar
+                    con mas marcas como lo es Scott y Specialized, en la actualidad somos una empresa
+                    lider en venta de bicicletas a nivel nacional.
+                </p>
+                <h3>Nuestro compromiso:</h3>
+                <p>
+                    Estamos comprometidos con todos nuestros clientes en ofrecerles y proporcionarles
+                    productos de calidad y de buen rendimiento, estamos comprometidos a mantener
+                    un buen stock de los productos mas demandados por nuestros clientes.
+                </p>
+            </main>
+        </div>
+
+        <!--Contenedor del pie de pagina-->
+        <div id="pie">
+            <footer>
+                <p>Avenida del optimista y soñador, Zona 12</p>
+                <p>Ciudad de Guatemala</p>
+                <p>@2020bikeshop - Todos los derechos reservados</p>
+                <p>Contactenos Via: <a href="">email</a> </p>
+            </footer>
+        </div>
+    </div>
+    <script src="js/productos.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

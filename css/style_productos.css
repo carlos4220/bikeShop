@@ -1,0 +1,35 @@
+#bicicletas{
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+#bicicletas div p{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.cantidad{
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+.img_prod{
+    height: 50%;
+    width: 70%;
+    transition: transform 0.3s ease-in-out 0.0s;
+}
+
+.img_prod:hover{
+    transform: scale(1.1);
+}
+
+@media(max-width:650px){
+    #bicicletas{
+        grid-template-columns: 1fr;
+    }
+}
